@@ -48,7 +48,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'beforePage',
-          path: '/uuhhpcworkflow/before',
+          path: '/hpcworkflowbefore',
           builder: (context, params) => BeforePageWidget(
             qstr: params.getParam(
               'qstr',
@@ -90,7 +90,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'afterPage',
-          path: '/uuhhpcworkflow/after',
+          path: '/hpcworkflowafter',
           builder: (context, params) => AfterPageWidget(
             qstr: params.getParam(
               'qstr',
