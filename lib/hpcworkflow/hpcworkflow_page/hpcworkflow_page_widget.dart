@@ -50,7 +50,7 @@ class _HpcworkflowPageWidgetState extends State<HpcworkflowPageWidget> {
       }
 
       if (_model.qstr == null || _model.qstr == '') {
-        context.pushNamed('errorPage');
+        context.goNamed('errorPage');
 
         return;
       }

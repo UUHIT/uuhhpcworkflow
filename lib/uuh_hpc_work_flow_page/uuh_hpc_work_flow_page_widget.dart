@@ -46,7 +46,7 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
       }
 
       if (_model.qstr == null || _model.qstr == '') {
-        context.pushNamed('errorPage');
+        context.goNamed('errorPage');
 
         return;
       }

@@ -43,7 +43,7 @@ class _BeforePageWidgetState extends State<BeforePageWidget> {
       }
 
       if (_model.qstr == null || _model.qstr == '') {
-        context.pushNamed('errorPage');
+        context.goNamed('errorPage');
 
         return;
       }
