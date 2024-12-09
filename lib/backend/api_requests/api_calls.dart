@@ -11,7 +11,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start HHIARTS Documentation Group Code
 
 class HHIARTSDocumentationGroup {
-  static String getBaseUrl() => 'https://pmobile.uuh.ulsan.kr:8888';
+  static String getBaseUrl() => 'https://pmobile.uuh.ulsan.kr:8443';
   static Map<String, String> headers = {
     'X-API-KEY':
         '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
