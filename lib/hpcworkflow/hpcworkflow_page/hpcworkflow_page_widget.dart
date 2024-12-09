@@ -49,6 +49,11 @@ class _HpcworkflowPageWidgetState extends State<HpcworkflowPageWidget> {
         safeSetState(() {});
       }
 
+      if (_model.qstr == null || _model.qstr == '') {
+        context.pushNamed('errorPage');
+
+        return;
+      }
       _model.decryptParm =
           await HHIARTSDocumentationGroup.decryptParmUsingPOSTCall.call(
         qstr: _model.qstr,

@@ -566,6 +566,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // errorPage
+  {
+    'zlk27afq': {
+      'ko': '올바르지 않은 접근입니다.',
+      'en': '',
+    },
+    'yrw30sqw': {
+      'ko': 'Home',
+      'en': '',
+    },
+  },
   // keyinfoComponent
   {
     'mfk8r6zg': {

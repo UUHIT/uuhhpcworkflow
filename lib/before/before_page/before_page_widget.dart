@@ -42,6 +42,11 @@ class _BeforePageWidgetState extends State<BeforePageWidget> {
         safeSetState(() {});
       }
 
+      if (_model.qstr == null || _model.qstr == '') {
+        context.pushNamed('errorPage');
+
+        return;
+      }
       _model.decryptParm =
           await HHIARTSDocumentationGroup.decryptParmUsingPOSTCall.call(
         qstr: _model.qstr,

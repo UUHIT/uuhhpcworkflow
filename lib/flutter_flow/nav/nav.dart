@@ -178,6 +178,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'ParkingStatusPage',
           path: '/parkingStatusPage',
           builder: (context, params) => const ParkingStatusPageWidget(),
+        ),
+        FFRoute(
+          name: 'errorPage',
+          path: '/errorPage',
+          builder: (context, params) => const ErrorPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

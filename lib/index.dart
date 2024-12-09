@@ -16,3 +16,4 @@ export '/after/after_result_page/after_result_page_widget.dart'
 export '/after/result_p_d_f/result_p_d_f_widget.dart' show ResultPDFWidget;
 export '/before/parking_status_page/parking_status_page_widget.dart'
     show ParkingStatusPageWidget;
+export '/error_page/error_page_widget.dart' show ErrorPageWidget;

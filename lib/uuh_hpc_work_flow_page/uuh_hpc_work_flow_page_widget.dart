@@ -45,6 +45,11 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
         safeSetState(() {});
       }
 
+      if (_model.qstr == null || _model.qstr == '') {
+        context.pushNamed('errorPage');
+
+        return;
+      }
       if (_model.process == 'before') {
         context.goNamed(
           'beforePage',
@@ -55,6 +60,8 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
             ),
           }.withoutNulls,
         );
+
+        return;
       } else {
         if (_model.process == 'after') {
           context.goNamed(
@@ -66,6 +73,8 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
               ),
             }.withoutNulls,
           );
+
+          return;
         } else {
           if (_model.process == 'daily') {
             context.pushNamed(
@@ -77,6 +86,8 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
                 ),
               }.withoutNulls,
             );
+
+            return;
           }
         }
       }
