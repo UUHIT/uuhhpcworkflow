@@ -15,6 +15,8 @@ class UuhHpcWorkFlowPageModel
 
   String? qstr;
 
+  String? process;
+
   ///  State fields for stateful widgets in this page.
 
   // Stores action output result for [Backend Call - API (decryptParmUsingPOST)] action in uuhHpcWorkFlowPage widget.

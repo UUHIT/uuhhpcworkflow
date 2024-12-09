@@ -59,15 +59,15 @@ dynamic getFirstJson(dynamic jsonParm) {
   return null;
 }
 
-String? getCurrentURL() {
+String? getCurrentURL(String? key) {
   // Get current URI
   Uri uri = Uri.base;
 
   // Get parameters 'patid' and 'inspecdate' from URI, set to empty string if null
-  String qstr = uri.queryParameters['qstr'] ?? '';
+  String value = uri.queryParameters[key] ?? '';
 
   // Return the JSON object
-  return qstr;
+  return value;
 }
 
 String? dateFormatKR(String? stringDate) {

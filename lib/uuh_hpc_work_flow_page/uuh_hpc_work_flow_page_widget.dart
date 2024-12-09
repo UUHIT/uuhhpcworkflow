@@ -36,14 +36,16 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (widget.qstr == null || widget.qstr == '') {
-        _model.qstr = functions.getCurrentURL();
+        _model.qstr = functions.getCurrentURL('qstr');
+        safeSetState(() {});
+        _model.process = functions.getCurrentURL('process');
         safeSetState(() {});
       } else {
         _model.qstr = widget.qstr;
         safeSetState(() {});
       }
 
-      if (widget.process == 'before') {
+      if (_model.process == 'before') {
         context.goNamed(
           'beforePage',
           queryParameters: {
@@ -54,7 +56,7 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
           }.withoutNulls,
         );
       } else {
-        if (widget.process == 'after') {
+        if (_model.process == 'after') {
           context.goNamed(
             'afterPage',
             queryParameters: {
@@ -65,7 +67,7 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
             }.withoutNulls,
           );
         } else {
-          if (widget.process == 'daily') {
+          if (_model.process == 'daily') {
             context.pushNamed(
               'hpcworkflowPage',
               queryParameters: {

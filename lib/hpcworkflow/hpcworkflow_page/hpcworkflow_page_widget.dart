@@ -42,7 +42,7 @@ class _HpcworkflowPageWidgetState extends State<HpcworkflowPageWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (widget.qstr == null || widget.qstr == '') {
-        _model.qstr = functions.getCurrentURL();
+        _model.qstr = functions.getCurrentURL('qstr');
         safeSetState(() {});
       } else {
         _model.qstr = widget.qstr;
