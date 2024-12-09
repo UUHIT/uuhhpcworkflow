@@ -12,9 +12,11 @@ class UuhHpcWorkFlowPageWidget extends StatefulWidget {
   const UuhHpcWorkFlowPageWidget({
     super.key,
     this.qstr,
+    this.process,
   });
 
   final String? qstr;
+  final String? process;
 
   @override
   State<UuhHpcWorkFlowPageWidget> createState() =>
@@ -39,6 +41,42 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
       } else {
         _model.qstr = widget.qstr;
         safeSetState(() {});
+      }
+
+      if (widget.process == 'before') {
+        context.goNamed(
+          'beforePage',
+          queryParameters: {
+            'qstr': serializeParam(
+              _model.qstr,
+              ParamType.String,
+            ),
+          }.withoutNulls,
+        );
+      } else {
+        if (widget.process == 'after') {
+          context.goNamed(
+            'afterPage',
+            queryParameters: {
+              'qstr': serializeParam(
+                _model.qstr,
+                ParamType.String,
+              ),
+            }.withoutNulls,
+          );
+        } else {
+          if (widget.process == 'daily') {
+            context.pushNamed(
+              'hpcworkflowPage',
+              queryParameters: {
+                'qstr': serializeParam(
+                  _model.qstr,
+                  ParamType.String,
+                ),
+              }.withoutNulls,
+            );
+          }
+        }
       }
 
       _model.decryptParm =

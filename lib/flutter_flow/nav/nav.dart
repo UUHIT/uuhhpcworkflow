@@ -76,10 +76,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'uuhHpcWorkFlowPage',
-          path: '/uuhhpcworkflow/home',
+          path: '/uuhhpcworkflow',
           builder: (context, params) => UuhHpcWorkFlowPageWidget(
             qstr: params.getParam(
               'qstr',
+              ParamType.String,
+            ),
+            process: params.getParam(
+              'process',
               ParamType.String,
             ),
           ),
