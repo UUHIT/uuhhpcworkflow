@@ -305,7 +305,7 @@ class _AfterPageWidgetState extends State<AfterPageWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 5.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -349,7 +349,7 @@ class _AfterPageWidgetState extends State<AfterPageWidget> {
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
-                                          'z4tpc4e5' /* 🗓 결과상담 재방문검사 일정 */,
+                                          'z4tpc4e5' /* 🗓 상담 재방문검사 일정 */,
                                         ),
                                         options: FFButtonOptions(
                                           height: 90.0,
@@ -386,7 +386,7 @@ class _AfterPageWidgetState extends State<AfterPageWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 5.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -467,7 +467,7 @@ class _AfterPageWidgetState extends State<AfterPageWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 5.0)),
                                 ),
                               ].divide(const SizedBox(height: 10.0)),
                             ),

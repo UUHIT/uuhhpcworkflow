@@ -363,7 +363,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'z4tpc4e5': {
-      'ko': '🗓 결과상담 재방문검사 일정',
+      'ko': '🗓 상담 재방문검사 일정',
       'en': '',
     },
     'syvgk1cc': {
