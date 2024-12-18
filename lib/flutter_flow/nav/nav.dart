@@ -11,6 +11,8 @@ export 'serialization_util.dart';
 
 const kTransitionInfoKey = '__transition_info__';
 
+GlobalKey<NavigatorState> appNavigatorKey = GlobalKey<NavigatorState>();
+
 class AppStateNotifier extends ChangeNotifier {
   AppStateNotifier._();
 
@@ -29,6 +31,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
+      navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) => const UuhHpcWorkFlowPageWidget(),
       routes: [
         FFRoute(
@@ -60,16 +63,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'inspectablePage',
           path: '/inspectable',
           builder: (context, params) => InspectablePageWidget(
-            patid: params.getParam(
-              'patid',
-              ParamType.String,
-            ),
             inspecdate: params.getParam(
               'inspecdate',
               ParamType.String,
             ),
             encryptedChartnumber: params.getParam(
               'encryptedChartnumber',
+              ParamType.String,
+            ),
+            patid: params.getParam(
+              'patid',
               ParamType.String,
             ),
           ),

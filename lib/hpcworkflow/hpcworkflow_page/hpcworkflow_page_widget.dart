@@ -164,7 +164,10 @@ class _HpcworkflowPageWidgetState extends State<HpcworkflowPageWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
@@ -1298,7 +1301,10 @@ class _HpcworkflowPageWidgetState extends State<HpcworkflowPageWidget> {
                                                                                                         backgroundColor: Colors.transparent,
                                                                                                         alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                         child: GestureDetector(
-                                                                                                          onTap: () => FocusScope.of(dialogContext).unfocus(),
+                                                                                                          onTap: () {
+                                                                                                            FocusScope.of(dialogContext).unfocus();
+                                                                                                            FocusManager.instance.primaryFocus?.unfocus();
+                                                                                                          },
                                                                                                           child: WaitlistDetailComponentWidget(
                                                                                                             patid: _model.patid!,
                                                                                                             inspecdate: _model.inspecdate!,

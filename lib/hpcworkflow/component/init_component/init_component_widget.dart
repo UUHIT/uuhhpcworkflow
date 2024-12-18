@@ -250,7 +250,7 @@ class _InitComponentWidgetState extends State<InitComponentWidget>
                 child: Image.asset(
                   'assets/images/kioskguide.png',
                   width: 150.0,
-                  height: 250.0,
+                  height: 300.0,
                   fit: BoxFit.contain,
                 ),
               ).animateOnPageLoad(animationsMap['imageOnPageLoadAnimation']!),

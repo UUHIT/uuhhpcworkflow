@@ -51,7 +51,7 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
         return;
       }
       if (_model.process == 'before') {
-        context.goNamed(
+        context.pushNamed(
           'beforePage',
           queryParameters: {
             'qstr': serializeParam(
@@ -64,7 +64,7 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
         return;
       } else {
         if (_model.process == 'after') {
-          context.goNamed(
+          context.pushNamed(
             'afterPage',
             queryParameters: {
               'qstr': serializeParam(
@@ -97,6 +97,11 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
         qstr: _model.qstr,
       );
 
+      if (!(_model.decryptParm?.succeeded ?? true)) {
+        context.pushNamed('errorPage');
+
+        return;
+      }
       _model.patid = getJsonField(
         (_model.decryptParm?.jsonBody ?? ''),
         r'''$.patid''',
@@ -125,7 +130,10 @@ class _UuhHpcWorkFlowPageWidgetState extends State<UuhHpcWorkFlowPageWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,

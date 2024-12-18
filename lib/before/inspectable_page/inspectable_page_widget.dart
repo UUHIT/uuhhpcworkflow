@@ -10,14 +10,14 @@ export 'inspectable_page_model.dart';
 class InspectablePageWidget extends StatefulWidget {
   const InspectablePageWidget({
     super.key,
-    this.patid,
     this.inspecdate,
     this.encryptedChartnumber,
+    this.patid,
   });
 
-  final String? patid;
   final String? inspecdate;
   final String? encryptedChartnumber;
+  final String? patid;
 
   @override
   State<InspectablePageWidget> createState() => _InspectablePageWidgetState();
@@ -72,7 +72,10 @@ class _InspectablePageWidgetState extends State<InspectablePageWidget> {
             snapshot.data!;
 
         return GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+          onTap: () {
+            FocusScope.of(context).unfocus();
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,

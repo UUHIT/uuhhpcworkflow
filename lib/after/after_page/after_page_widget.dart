@@ -108,7 +108,10 @@ class _AfterPageWidgetState extends State<AfterPageWidget> {
         final afterPageGetRegistrationUsingPOSTResponse = snapshot.data!;
 
         return GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+          onTap: () {
+            FocusScope.of(context).unfocus();
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -264,7 +267,7 @@ class _AfterPageWidgetState extends State<AfterPageWidget> {
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
-                                          'epciqq46' /* 💡 검진 후 주의사항 */,
+                                          'epciqq46' /* 💡 검진 후 유의사항 */,
                                         ),
                                         options: FFButtonOptions(
                                           height: 90.0,

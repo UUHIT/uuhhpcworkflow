@@ -359,7 +359,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'epciqq46': {
-      'ko': '💡 검진 후 주의사항',
+      'ko': '💡 검진 후 유의사항',
       'en': '',
     },
     'z4tpc4e5': {

@@ -105,7 +105,10 @@ class _BeforePageWidgetState extends State<BeforePageWidget> {
         final beforePageGetRegistrationUsingPOSTResponse = snapshot.data!;
 
         return GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+          onTap: () {
+            FocusScope.of(context).unfocus();
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -246,10 +249,6 @@ class _BeforePageWidgetState extends State<BeforePageWidget> {
                                           context.pushNamed(
                                             'inspectablePage',
                                             queryParameters: {
-                                              'patid': serializeParam(
-                                                _model.patid,
-                                                ParamType.String,
-                                              ),
                                               'inspecdate': serializeParam(
                                                 _model.inspecdate,
                                                 ParamType.String,
@@ -258,6 +257,10 @@ class _BeforePageWidgetState extends State<BeforePageWidget> {
                                                   serializeParam(
                                                 functions.urlEncode(_model
                                                     .encryptedChartnumber!),
+                                                ParamType.String,
+                                              ),
+                                              'patid': serializeParam(
+                                                _model.patid,
                                                 ParamType.String,
                                               ),
                                             }.withoutNulls,
@@ -526,7 +529,7 @@ class _BeforePageWidgetState extends State<BeforePageWidget> {
                                               child: FFButtonWidget(
                                                 onPressed: () async {
                                                   await launchURL(
-                                                      'https://app.mappedin.com/map/6682551d224987000bcc185f');
+                                                      'https://health.uuh.ulsan.kr/health/index.php?pCode=MN000080');
                                                 },
                                                 text:
                                                     FFLocalizations.of(context)
