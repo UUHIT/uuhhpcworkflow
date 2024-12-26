@@ -11,10 +11,8 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start HHIARTS Documentation Group Code
 
 class HHIARTSDocumentationGroup {
-  static String getBaseUrl() => 'https://pmobile.uuh.ulsan.kr:8443';
+  static String getBaseUrl() => 'https://pmobile.uuh.ulsan.kr:8888';
   static Map<String, String> headers = {
-    'X-API-KEY':
-        '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
     'Content-Type': 'application/json',
   };
   static GetInspectableUsingPOSTCall getInspectableUsingPOSTCall =
@@ -64,8 +62,6 @@ class GetInspectableUsingPOSTCall {
       apiUrl: '$baseUrl/api/getInspectable',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -91,8 +87,6 @@ class GetPatientBasisUsingPOSTCall {
       apiUrl: '$baseUrl/api/getPatientBasis',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -126,8 +120,6 @@ class GetRegistrationUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getRegistration',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -184,8 +176,6 @@ class GetResultListUsingPOSTCall {
       apiUrl: '$baseUrl/api/getResultList',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -219,8 +209,6 @@ class GetWaitListUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getWaitList',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -285,8 +273,6 @@ class InsertStatusUsingGETCall {
       apiUrl: '$baseUrl/api/insertStatus',
       callType: ApiCallType.GET,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {
@@ -322,8 +308,6 @@ class GetHpcWorkFlowUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getHpcWorkFlow',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -357,8 +341,6 @@ $qstr''';
       apiUrl: '$baseUrl/uuhhpcapi/api/decryptParm',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -395,8 +377,6 @@ class GetWaitListDetailUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getWaitListDetail',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -473,8 +453,6 @@ class GetRegistrationListUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getRegistrationList',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -519,8 +497,6 @@ class GetAfterScheduleUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getAfterSchedule',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -557,8 +533,6 @@ class GetResultPdfUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getResultPdf',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -598,8 +572,6 @@ class GetBeforeNoticeInfoUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getBeforeNoticeInfo',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -695,8 +667,6 @@ class GetAfterNoticeInfoUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getAfterNoticeInfo',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -778,8 +748,6 @@ $patid''';
       apiUrl: '$baseUrl/uuhhpcapi/api/encryptChartnumber',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -814,8 +782,6 @@ class GetDisreqExistUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/getDisreqExist',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
@@ -875,8 +841,6 @@ class InsertDisreqUsingPOSTCall {
       apiUrl: '$baseUrl/uuhhpcapi/api/insertDisreq',
       callType: ApiCallType.POST,
       headers: {
-        'X-API-KEY':
-            '3D5771BC7AE2E39BAA90FD8E9B5C7BC2E4236A7323DCA98C825C4BDCAFF88485',
         'Content-Type': 'application/json',
       },
       params: {},
